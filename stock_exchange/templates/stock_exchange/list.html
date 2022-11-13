@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script src="{% static 'js/stock_exchange.js' %}" defer></script>
+{% endblock %}
+
+{% block content %}
+    <h1>Stock Exchange</h1>
+    <h4>Notowania GPW - akcje</h4>
+    <div id="stock-exchange">
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>Walor</th>
+                <th>Kurs</th>
+                <th>Zmiana</th>
+                <th>Zmiana procentowa</th>
+                <th>Liczba transakcji</th>
+                <th>Obrót</th>
+                <th>Otwarcie</th>
+                <th>Max</th>
+                <th>Min</th>
+                <th>Czas</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
